@@ -1,5 +1,7 @@
 package af.gov.anar.lib.accountnumber.exception;
 
+import af.gov.anar.lib.accountnumber.code.BbanEntryType;
+
 /**
  * Thrown to indicate that the application has attempted to convert
  * a string to Iban, but that the string does not
