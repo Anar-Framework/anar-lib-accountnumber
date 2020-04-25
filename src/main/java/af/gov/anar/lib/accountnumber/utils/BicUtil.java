@@ -7,7 +7,7 @@ import af.gov.anar.lib.accountnumber.exception.UnsupportedCountryException;
 import static af.gov.anar.lib.accountnumber.exception.BicFormatException.BicFormatViolation.*;
 
 /**
- * Bic Utility Class
+ * Bic Utility Class -- BIC (Bank Identifier Code)
  */
 public class BicUtil {
 
