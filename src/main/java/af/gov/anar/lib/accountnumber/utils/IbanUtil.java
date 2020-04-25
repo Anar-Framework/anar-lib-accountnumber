@@ -3,7 +3,7 @@ package af.gov.anar.lib.accountnumber.utils;
 import static af.gov.anar.lib.accountnumber.exception.IbanFormatException.IbanFormatViolation.*;
 
 /**
- * Iban Utility Class
+ * Iban Utility Class -- IBAN (International Bank Account Number)
  */
 public final class IbanUtil {
 
