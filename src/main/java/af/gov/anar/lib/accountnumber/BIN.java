@@ -21,7 +21,7 @@ import static af.gov.anar.lib.accountnumber.exception.IbanFormatException.IbanFo
  *
  * <a href="http://en.wikipedia.org/wiki/ISO_13616">ISO_13616</a>.
  */
-public final class Iban {
+public final class BIN {
 
     public static final String DEFAULT_CHECK_DIGIT = "00";
 
@@ -33,7 +33,7 @@ public final class Iban {
      *
      * @param value String
      */
-    private Iban(final String value) {
+    private BIN(final String value) {
         this.value = value;
     }
 
@@ -137,10 +137,10 @@ public final class Iban {
      *         UnsupportedCountryException if Iban's Country is not supported.
      *
      */
-    public static Iban valueOf(final String iban) throws IbanFormatException,
+    public static BIN valueOf(final String iban) throws IbanFormatException,
             InvalidCheckDigitException, UnsupportedCountryException {
         IbanUtil.validate(iban);
-        return new Iban(iban);
+        return new BIN(iban);
     }
 
     /**
@@ -154,12 +154,12 @@ public final class Iban {
      *         UnsupportedCountryException if Iban's Country is not supported.
      *
      */
-    public static Iban valueOf(final String iban, final IbanFormat format) throws IbanFormatException,
+    public static BIN valueOf(final String iban, final IbanFormat format) throws IbanFormatException,
             InvalidCheckDigitException, UnsupportedCountryException {
         switch (format) {
             case Default:
                 final String ibanWithoutSpaces = iban.replace(" ", "");
-                final Iban ibanObj = valueOf(ibanWithoutSpaces);
+                final BIN ibanObj = valueOf(ibanWithoutSpaces);
                 if(ibanObj.toFormattedString().equals(iban)) {
                     return ibanObj;
                 }
@@ -185,18 +185,18 @@ public final class Iban {
         return IbanUtil.toFormattedString(value);
     }
 
-    public static Iban random() {
-        return new Iban.Builder().buildRandom();
+    public static BIN random() {
+        return new BIN.Builder().buildRandom();
     }
 
-    public static Iban random(CountryCode cc) {
-        return new Iban.Builder().countryCode(cc).buildRandom();
+    public static BIN random(CountryCode cc) {
+        return new BIN.Builder().countryCode(cc).buildRandom();
     }
 
     @Override
     public boolean equals(final Object obj) {
-        if (obj instanceof Iban) {
-            return value.equals(((Iban)obj).value);
+        if (obj instanceof BIN) {
+            return value.equals(((BIN)obj).value);
         }
         return false;
     }
@@ -324,7 +324,7 @@ public final class Iban {
          *  <a href="http://en.wikipedia.org/wiki/ISO_13616">ISO_13616</a>
          * @exception UnsupportedCountryException if country is not supported
          */
-        public Iban build() throws IbanFormatException,
+        public BIN build() throws IbanFormatException,
                 IllegalArgumentException, UnsupportedCountryException {
             return build(true);
         }
@@ -339,7 +339,7 @@ public final class Iban {
          *  <a href="http://en.wikipedia.org/wiki/ISO_13616">ISO_13616</a>
          * @exception UnsupportedCountryException if country is not supported
          */
-        public Iban build(boolean validate) throws IbanFormatException,
+        public BIN build(boolean validate) throws IbanFormatException,
                 IllegalArgumentException, UnsupportedCountryException {
 
             // null checks
@@ -356,7 +356,7 @@ public final class Iban {
             if (validate) {
                 IbanUtil.validate(ibanValue);
             }
-            return new Iban(ibanValue);
+            return new BIN(ibanValue);
         }
 
         /**
@@ -368,7 +368,7 @@ public final class Iban {
          * @exception UnsupportedCountryException if country is not supported
          *
          */
-        public Iban buildRandom() throws IbanFormatException,
+        public BIN buildRandom() throws IbanFormatException,
                 IllegalArgumentException, UnsupportedCountryException {
             if (countryCode == null) {
                 List<CountryCode> countryCodes = BbanStructure.supportedCountries();
