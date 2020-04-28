@@ -1,10 +1,10 @@
 package af.gov.anar.lib.accountnumber;
 
 
-import af.gov.anar.lib.accountnumber.code.BbanStructure;
-import af.gov.anar.lib.accountnumber.code.BbanStructureEntry;
-import af.gov.anar.lib.accountnumber.code.CountryCode;
-import af.gov.anar.lib.accountnumber.code.IbanFormat;
+import af.gov.anar.lib.accountnumber.type.BbanStructure;
+import af.gov.anar.lib.accountnumber.type.BbanStructureEntry;
+import af.gov.anar.lib.accountnumber.type.CountryCode;
+import af.gov.anar.lib.accountnumber.type.IbanFormat;
 import af.gov.anar.lib.accountnumber.exception.IbanFormatException;
 import af.gov.anar.lib.accountnumber.exception.InvalidCheckDigitException;
 import af.gov.anar.lib.accountnumber.exception.UnsupportedCountryException;

@@ -1,6 +1,6 @@
 package af.gov.anar.lib.accountnumber.utils;
 
-import af.gov.anar.lib.accountnumber.code.CountryCode;
+import af.gov.anar.lib.accountnumber.type.CountryCode;
 import af.gov.anar.lib.accountnumber.exception.BicFormatException;
 import af.gov.anar.lib.accountnumber.exception.UnsupportedCountryException;
 

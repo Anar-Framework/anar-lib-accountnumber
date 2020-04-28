@@ -1,4 +1,4 @@
-package af.gov.anar.lib.accountnumber.code;
+package af.gov.anar.lib.accountnumber.type;
 
 /**
  * Iban Format Enum

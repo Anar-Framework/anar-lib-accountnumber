@@ -1,6 +1,6 @@
 package af.gov.anar.lib.accountnumber.utils;
 
-import af.gov.anar.lib.accountnumber.code.*;
+import af.gov.anar.lib.accountnumber.type.*;
 import af.gov.anar.lib.accountnumber.exception.Iban4jException;
 import af.gov.anar.lib.accountnumber.exception.IbanFormatException;
 import af.gov.anar.lib.accountnumber.exception.InvalidCheckDigitException;
